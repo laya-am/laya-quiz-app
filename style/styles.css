@@ -1,9 +1,9 @@
 
 :root{
-    --navbar-color: #798777;
-    --body-color: #BDD2B6;
-    --card-color: #A2B29F;
-    --button-color: #F8EDE3;
+    --navbar-color: #6096B4;
+    --body-color: #93BFCF;
+    --card-color: #EEE9DA;
+    --button-color: #BDCDD6;
 }
 
 *{
@@ -27,14 +27,6 @@ header{
     height: 30px;
 }
 
-/* .bookmark-filled{
-    visibility:hidden;
-}
-
-.bookmark-filled:focus{
-    visibility: visible;
-} */
-
 h1{
     padding: 30px;
 }
@@ -48,11 +40,11 @@ main{
 
 .q-container{
     background-color:var(--card-color);
-    margin: 40px;
-    padding: 20px;
+    margin: 30px 40px;
+    padding: 30px;
     border: 1px solid gray;
     box-shadow: 10px 10px 10px gray;
-    border-radius: 5px;
+    border-radius: 7px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -70,15 +62,21 @@ main{
     border-radius: 7px;
 }
 
-.btn-answer{
+.btn-answer-show{
     width: 150px;
     height: 50px;
     background-color:var(--button-color);
     margin: 20px;
 }
 
-.btn-answer:focus{
-    
+.p-answer{
+    display: none;
+}
+
+.answer-container:focus-within p{
+    display: block;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
 .tags-container{
@@ -105,3 +103,6 @@ justify-content: space-evenly;
 .icon{
     height: 50px;
 }
+
+/* austricksen
+ausgetrickst haben */

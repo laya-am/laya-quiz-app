@@ -1,9 +1,9 @@
 
 :root{
-    --navbar-color: #BFCCB5;
-    --body-color: #7C96AB;
-    --card-color: #B7B7B7;
-    --button-color: #EDC6B1;
+    --navbar-color: #798777;
+    --body-color: #BDD2B6;
+    --card-color: #A2B29F;
+    --button-color: #F8EDE3;
 }
 
 *{
@@ -26,6 +26,14 @@ header{
 .bookmark{
     height: 30px;
 }
+
+/* .bookmark-filled{
+    visibility:hidden;
+}
+
+.bookmark-filled:focus{
+    visibility: visible;
+} */
 
 h1{
     padding: 30px;

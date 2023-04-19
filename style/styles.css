@@ -1,3 +1,107 @@
-body{
+
+:root{
+    --navbar-color: #798777;
+    --body-color: #BDD2B6;
+    --card-color: #A2B29F;
+    --button-color: #F8EDE3;
+}
+
+*{
+    box-sizing: border-box;
     margin: 0;
+    padding:0
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+
+}
+
+header{
+    background-color: var(--navbar-color);
+    text-align: center;
+}
+
+.bookmark{
+    height: 30px;
+}
+
+/* .bookmark-filled{
+    visibility:hidden;
+}
+
+.bookmark-filled:focus{
+    visibility: visible;
+} */
+
+h1{
+    padding: 30px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 150px;
+}
+
+.q-container{
+    background-color:var(--card-color);
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid gray;
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookmark{
+    position: absolute;
+    right: 10px;
+    top:0;
+}
+
+.btn{
+    text-align: center;
+    border-radius: 7px;
+}
+
+.btn-answer{
+    width: 150px;
+    height: 50px;
+    background-color:var(--button-color);
+    margin: 20px;
+}
+
+.btn-answer:focus{
+    
+}
+
+.tags-container{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 5px
+}
+
+.btn-tag{
+    padding: 5px;
+}
+
+footer{
+background-color: var(--navbar-color);
+position: fixed;
+bottom: 0;
+width: 100%;
+padding: 20px;
+display: flex;
+justify-content: space-evenly;
+}
+
+.icon{
+    height: 50px;
 }

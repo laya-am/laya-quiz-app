@@ -1,12 +1,26 @@
 
+:root{
+    --navbar-color: #BFCCB5;
+    --body-color: #7C96AB;
+    --card-color: #B7B7B7;
+    --button-color: #EDC6B1;
+}
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0
+}
 
 body{
-    margin: 0;
+    min-height: 100vh;
+    background-color: var(--body-color);
+
 }
 
 header{
-    background-color: lightpink;
+    background-color: var(--navbar-color);
+    text-align: center;
 }
 
 .bookmark{
@@ -18,14 +32,14 @@ h1{
 }
 
 main{
-    background-color: lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-bottom: 150px;
 }
 
 .q-container{
-    background-color:lightblue;
+    background-color:var(--card-color);
     margin: 40px;
     padding: 20px;
     border: 1px solid gray;
@@ -51,8 +65,12 @@ main{
 .btn-answer{
     width: 150px;
     height: 50px;
-    background-color:darkseagreen;
+    background-color:var(--button-color);
     margin: 20px;
+}
+
+.btn-answer:focus{
+    
 }
 
 .tags-container{
@@ -63,11 +81,11 @@ main{
 }
 
 .btn-tag{
-    ;
+    padding: 5px;
 }
 
 footer{
-background-color: lightpink;
+background-color: var(--navbar-color);
 position: fixed;
 bottom: 0;
 width: 100%;
@@ -77,5 +95,5 @@ justify-content: space-evenly;
 }
 
 .icon{
-    height: 60px;
+    height: 50px;
 }

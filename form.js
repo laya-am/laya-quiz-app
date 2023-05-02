@@ -1,10 +1,3 @@
-
-const question= document.querySelector('[data-js="question"]');
-const answer= document.querySelector('[data-js="answer"]');
-const charsQ= document.querySelector('[data-js="chars-q"]');
-const charsA= document.querySelector('[data-js="chars-answer"]');
-
-
 // make a new question card
 
 const form= document.querySelector('[data-js="form"]');
@@ -28,14 +21,16 @@ form.addEventListener("submit", (e) => {
         </div>
         `;
     e.target.reset();
-    charsQ.textContent= null;
-    charsA.textContent= null;
     main.append(newCard);
 });
 
 
 //character counter
 
+const question= document.querySelector('[data-js="question"]');
+const answer= document.querySelector('[data-js="answer"]');
+const charsQ= document.querySelector('[data-js="chars-q"]');
+const charsA= document.querySelector('[data-js="chars-answer"]');
 
 function calculator(e){
     let length = e.target.value.length;

@@ -1,5 +1,14 @@
-const form= document.querySelector('[data-js="form"]');
 
+const question= document.querySelector('[data-js="question"]');
+const answer= document.querySelector('[data-js="answer"]');
+const charsQ= document.querySelector('[data-js="chars-q"]');
+const charsA= document.querySelector('[data-js="chars-answer"]');
+
+
+// make a new question card
+
+const form= document.querySelector('[data-js="form"]');
+const main= document.querySelector('[data-js="main"]');
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const question= e.target.elements.question.value;
@@ -7,18 +16,40 @@ form.addEventListener("submit", (e) => {
     const tag= e.target.elements.tag.value;
 
     const newCard= document.createElement("section");
-//     newCard.innerHTML=`
-//     <img class="bookmark" src="./assets/bookmark.png" alt="bookmark">
-//     <img class="bookmark bookmark-filled" src="./assets//bookmark_filled.png" alt="bookmark">
-//     <h2>${question}</h2>
-//     <div class="answer-container">
-//         <button class="btn btn-answer-show">Show Answer</button>
-//         <p class="p-answer">This is the answer!</p>
-//     </div>
-//     <div class="tags-container">
-//         <button class="btn btn-tag">#HTML</button>
-//         <button class="btn btn-tag">#CSS</button>
-//         <button class="btn btn-tag">#flexbox</button>
-//     </div>
-//     `
-// });
+    newCard.classList.add("q-container")
+    newCard.innerHTML=`
+    <img class="bookmark" src="./assets/bookmark.png" data-js="bookmark" alt="bookmark">
+    <img class="bookmark" src="./assets//bookmark_filled.png" data-js="bookmark-filled" alt="bookmark" hidden>
+    <h2>${question}</h2>
+    <button class="btn btn-answer-show" data-js="show-answer">Show Answer</button>
+    <p class="p-answer" data-js="answer" hidden>${answer}</p>
+    <div class="tags-container">
+        <button class="btn btn-tag">${tag}</button>
+        </div>
+        `;
+    e.target.reset();
+    charsQ.textContent= null;
+    charsA.textContent= null;
+    main.append(newCard);
+});
+
+
+//character counter
+
+
+function calculator(e){
+    let length = e.target.value.length;
+    return `${150 - length} characters left`
+    }
+
+question.addEventListener("input", (e) => {
+    calculator(e);
+    const charsP= calculator(e);
+    charsQ.textContent= charsP;
+});
+
+answer.addEventListener("input", (e) => {
+    calculator(e);
+    const charsP= calculator(e);
+    charsA.textContent= charsP;
+});

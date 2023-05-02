@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,18 @@
     <header>
         <h1>Quiz App</h1>
     </header>
-    <main>
+    <main data-js="main">
         <form class="container form-container" data-js="form">
             <label for="form-question">Your Question:</label>
-            <textarea name="question" id="form-question" class="form-input" cols="30" rows="5"></textarea>
+            <textarea name="question" id="form-question" class="form-input" cols="30" rows="3" maxlength="150" data-js="question"></textarea>
+            <p class="chars chars-q" data-js="chars-q"></p>
             <label for="form-answer">Your Answer:</label>
-            <textarea name="answer" id="form-answer" class="form-input" cols="30" rows="5"></textarea>
+            <textarea name="answer" id="form-answer" class="form-input" cols="30" rows="3" maxlength="150" data-js="answer"></textarea>
+            <p class="chars chars-answer" data-js="chars-answer"></p>
             <label for="form-tag">Tag:</label>
             <input type="text" id="form-tag" class="form-input" name="tag">
             <div class="btn-container">
-                <button class="btn btn-submit btn-answer-show">Submit</button>
+                <button type="submit" class="btn btn-submit btn-answer-show">Submit</button>
             </div>
         </form>
     </main>

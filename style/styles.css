@@ -120,8 +120,9 @@ justify-content: space-evenly;
 }
 
 .form-container{
-    padding: 40px;
-    gap: 20px;
+    padding: 30px 40px 0 40px;
+    gap: 10px;
+    margin-bottom: 0;
 }
 
 .form-input{
@@ -138,7 +139,12 @@ justify-content: space-evenly;
     margin:0;
 }
 
-
+.chars{
+    color:rgb(80, 78, 78);
+    font-size: small;
+    margin-top: -20px;
+    align-self: flex-end;
+}
 
 
 

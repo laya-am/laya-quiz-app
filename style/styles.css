@@ -25,13 +25,16 @@ header{
 
 .bookmark{
     height: 30px;
+    position: absolute;
+    right: 10px;
+    top:0;
 }
 
 h1{
     padding: 30px;
 }
 
-main{
+.container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,12 +54,6 @@ main{
     align-items: center;
 }
 
-.bookmark{
-    position: absolute;
-    right: 10px;
-    top:0;
-}
-
 .btn{
     text-align: center;
     border-radius: 7px;
@@ -69,21 +66,17 @@ main{
     margin: 20px;
 }
 
-.p-answer{
-    display: none;
-}
-
-.answer-container:focus-within p{
-    display: block;
+ .p-answer{
     text-align: center;
-    padding-bottom: 15px;
+    margin: 15px;
 }
 
 .tags-container{
     width: 100%;
     display: flex;
     justify-content: start;
-    gap: 5px
+    gap: 5px;
+    margin-top: 10px;
 }
 
 .btn-tag{
@@ -126,7 +119,7 @@ justify-content: space-evenly;
     justify-content: space-around;
 }
 
-.form-main{
+.form-container{
     padding: 40px;
     gap: 20px;
 }

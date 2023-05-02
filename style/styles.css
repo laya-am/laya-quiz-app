@@ -126,6 +126,26 @@ justify-content: space-evenly;
     justify-content: space-around;
 }
 
+.form-main{
+    padding: 40px;
+    gap: 20px;
+}
+
+.form-input{
+    margin-bottom: 15px;
+    border-radius: 7px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-submit{
+    margin:0;
+}
+
+
 
 
 

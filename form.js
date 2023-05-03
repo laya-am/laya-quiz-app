@@ -15,13 +15,43 @@ form.addEventListener("submit", (e) => {
     <img class="bookmark" src="./assets//bookmark_filled.png" data-js="bookmark-filled" alt="bookmark" hidden>
     <h2>${question}</h2>
     <button class="btn btn-answer-show" data-js="show-answer">Show Answer</button>
-    <p class="p-answer" data-js="answer" hidden>${answer}</p>
+    <p class="p-answer" data-js="answer-to-be-shown" hidden>${answer}</p>
     <div class="tags-container">
         <button class="btn btn-tag">${tag}</button>
         </div>
         `;
     e.target.reset();
+    charsQ.textContent= "";
+    charsA.textContent= "";
     main.append(newCard);
+
+
+    //bookmark toggle
+
+const bookmark= document.querySelector('[data-js="bookmark"]');
+const bookmarkFilled= document.querySelector('[data-js="bookmark-filled"]');
+
+
+bookmark.addEventListener("click", () => {
+    bookmark.toggleAttribute("hidden");
+    bookmarkFilled.toggleAttribute("hidden");
+});
+
+bookmarkFilled.addEventListener("click", () => {
+    bookmark.toggleAttribute("hidden");
+    bookmarkFilled.toggleAttribute("hidden");
+});
+
+//answer toggle
+
+const showAnswerButton = document.querySelector('[data-js="show-answer"]');
+const answerToBeShown= document.querySelector('[data-js="answer-to-be-shown"]');
+
+showAnswerButton.addEventListener("click", () => {
+    answerToBeShown.toggleAttribute("hidden");
+    showAnswerButton.textContent === "Show Answer" ? showAnswerButton.textContent= "Hide Answer" : showAnswerButton.textContent= "Show Answer";
+});
+
 });
 
 
@@ -34,17 +64,15 @@ const charsA= document.querySelector('[data-js="chars-answer"]');
 
 function calculator(e){
     let length = e.target.value.length;
-    return `${150 - length} characters left`
-    }
+    return `${150 - length} characters left`;
+};
 
 question.addEventListener("input", (e) => {
     calculator(e);
-    const charsP= calculator(e);
-    charsQ.textContent= charsP;
+    charsQ.textContent= calculator(e);
 });
 
 answer.addEventListener("input", (e) => {
     calculator(e);
-    const charsP= calculator(e);
-    charsA.textContent= charsP;
+    charsA.textContent= calculator(e);
 });
